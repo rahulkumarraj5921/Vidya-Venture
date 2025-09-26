@@ -1,0 +1,207 @@
+/* सामान्य स्टाइल और बेसलाइन */
+:root {
+    --primary-color: #007bff; /* नीला - Class 9 theme */
+    --secondary-color: #28a745; /* हरा */
+    --bg-light: #f8f9fa;
+    --text-dark: #343a40;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+.logo {
+    display: flex; 
+    align-items: center;
+    gap: 10px; /* लोगो और टेक्स्ट के बीच की दूरी */
+}
+
+.logo img {
+    /* लोगो इमेज की साइज़ सेट करें */
+    height: 40px; /* ऊँचाई */
+    width: auto; /* चौड़ाई को ऑटो रखें */
+margin-left: 60px;}
+
+h1, h2, h3, h4 {
+    color: var(--text-dark);
+    margin-top: 0;
+}
+
+/* HEADER स्टाइल */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO स्टाइल */
+.logo {
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 10px 18px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 500;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: #e6f2ff; /* हल्का नीला होवर */
+    border-radius: 5px;
+}
+
+/* CLASS 9 HERO SECTION */
+.class-hero-section {
+    background: linear-gradient(135deg, var(--primary-color), #3498db); /* नीला ग्रेडिएंट */
+    color: white;
+    padding: 80px 4%;
+    text-align: center;
+}
+
+.class-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.class-hero-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* SUBJECT GRID SECTION */
+.subject-grid-section {
+    padding: 60px 4%;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.subject-grid-container {
+    display: grid;
+    /* 250px की न्यूनतम चौड़ाई के साथ 3 कॉलम का ग्रिड */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subject-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    text-align: left;
+    color: var(--text-dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid var(--primary-color); /* साइड हाईलाइट */
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card h4 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.subject-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* PRACTICE SECTION */
+.practice-section {
+    background-color: #eaf6ff; /* बहुत हल्का नीला */
+    padding: 50px 4%;
+    text-align: center;
+}
+
+.practice-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.practice-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.practice-btn:hover {
+    background-color: #1e7e34; /* गहरा हरा */
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 25px 4%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* मोबाइल रिस्पॉन्सिवनेस */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .class-title {
+        font-size: 2rem;
+    }
+}

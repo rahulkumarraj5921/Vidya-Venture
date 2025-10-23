@@ -1,0 +1,158 @@
+/* सामान्य स्टाइल और बेसलाइन */
+:root {
+    --primary-color: #28a745; /* हरा - Class 8 Science theme */
+    --secondary-color: #007bff; /* नीला */
+    --bg-light: #f8f9fa;
+    --text-dark: #343a40;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    border: 5px solid #efc050;
+    display: block;
+}
+
+
+
+h1, h2, h3, h4 {
+    color: var(--text-dark);
+    margin-top: 0;
+}
+
+/* HEADER/NAV Bar (पिछले कोड से) */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo {
+    display: flex; 
+    align-items: center;
+    gap: 10px; /* लोगो और टेक्स्ट के बीच की दूरी */}
+
+.logo h1 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 0;
+    
+}
+
+.logo img {
+    /* लोगो इमेज की साइज़ सेट करें */
+    height: 40px; /* ऊँचाई */
+    width: auto; /* चौड़ाई को ऑटो रखें */
+margin-left: 60px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 10px 18px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 500;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: #e6ffe6; 
+    border-radius: 5px;
+}
+
+/* SUBJECT HERO SECTION */
+.subject-hero-section {
+    background: linear-gradient(135deg, var(--primary-color), #47d16b); 
+    color: white;
+    padding: 80px 4%;
+    text-align: center;
+}
+
+.subject-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+/* UNIT/CHAPTER GRID SECTION */
+.chapter-grid-section {
+    padding: 60px 4%;
+    text-align: center;
+}
+
+.question-block{
+color: red;
+text-align: 20px;
+margin-left: 30px;
+font: bold;
+}
+
+.options{
+color: #000;
+text-align: 20px;
+margin-left: 30px;
+font: bold;
+}
+
+.answer{
+color: green;
+text-align: 20px;
+margin-left: 30px;
+font: bold;
+}
+
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 25px 4%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.access-btn:hover {
+    background-color: #0056b3; 
+}
+
+
+.access-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}

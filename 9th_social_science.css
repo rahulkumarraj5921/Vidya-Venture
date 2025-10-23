@@ -1,0 +1,209 @@
+/* सामान्य स्टाइल और बेसलाइन */
+:root {
+    --primary-color: #556b2f; /* गहरा भूरा/हरा (Olive Green) - Class 9 SST theme */
+    --secondary-color: #b8860b; /* डार्क गोल्डन (एक्शन बटन के लिए) */
+    --bg-light: #f9fff6; /* बहुत हल्का हरा/सफेद बैकग्राउंड */
+    --text-dark: #343a40;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-dark);
+    margin-top: 0;
+}
+
+/* HEADER/NAV Bar */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex; 
+    align-items: center;
+    gap: 10px; /* लोगो और टेक्स्ट के बीच की दूरी */
+}
+
+.logo img {
+    /* लोगो इमेज की साइज़ सेट करें */
+    height: 40px; /* ऊँचाई */
+    width: auto; /* चौड़ाई को ऑटो रखें */
+margin-left: 60px;
+}
+
+
+.logo h1 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 10px 18px;
+    transition: color 0.3s, background-color 0.3s;
+    font-weight: 500;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+    background-color: #f0fff0; /* हल्का हरा/टील होवर */
+    border-radius: 5px;
+}
+
+/* SUBJECT HERO SECTION */
+.subject-hero-section {
+    background: linear-gradient(135deg, var(--primary-color), #6b8e23); /* गहरा भूरा/हरा ग्रेडिएंट */
+    color: white;
+    padding: 80px 4%;
+    text-align: center;
+}
+
+.subject-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.subject-hero-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* UNIT/CHAPTER GRID SECTION */
+.chapter-grid-section {
+    padding: 60px 4%;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.chapter-grid-container {
+    display: grid;
+    /* 300px की न्यूनतम चौड़ाई के साथ 3 कॉलम का ग्रिड */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chapter-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    text-align: left;
+    color: var(--text-dark);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid var(--primary-color); /* थीम कलर बॉर्डर */
+}
+
+.chapter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chapter-card h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.chapter-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.view-link {
+    display: block;
+    margin-top: 10px;
+    color: var(--secondary-color); /* डार्क गोल्डन (त्वरित पहुँच) */
+    font-weight: 600;
+}
+
+/* QUICK ACCESS SECTION */
+.quick-access-section {
+    background-color: #f0fff0; /* बहुत हल्का हरा */
+    padding: 50px 4%;
+    text-align: center;
+}
+
+.access-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.access-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.access-btn:hover {
+    background-color: #a0740a; /* गहरा डार्क गोल्डन */
+}
+
+/* FOOTER */
+.main-footer {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 25px 4%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* मोबाइल रिस्पॉन्सिवनेस */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .subject-title {
+        font-size: 2rem;
+    }
+
+    .chapter-grid-container {
+        grid-template-columns: 1fr; /* मोबाइल पर सिंगल कॉलम */
+    }
+}
